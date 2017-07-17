@@ -25,7 +25,7 @@ function DrawTable(){
 			document.write('剩餘標籤：<input type="text" id="flag" name="flag" value="'+flag.value+' "readonly="readonly"><br/>');
 	document.write('</form>')
 	
-		document.write('<link rel="stylesheet" type="text/css" href="./css/mystyle.css">');
+		document.write('<link rel="stylesheet" type="text/css" href="/css/mystyle.css">');
 		document.write('<table border="1">');
 	for(var i=0;i<heigh.value;i++){
 		document.write('<tr>');
@@ -49,7 +49,7 @@ function setTable(){
 		for(var j=0;j<width.value;j++){
 			td[i][j]={id:0,bomb:0,total:0,marker:0};
 			td[i][j].id=document.getElementById("td"+i+"-"+j);
-			td[i][j].id.innerHTML='<IMG SRC="./images/space.jpg">';
+			td[i][j].id.innerHTML='<IMG SRC="images/space.jpg">';
 		}
 	}
 	setBomb(total.value);
@@ -66,17 +66,17 @@ function leftclick( x, y){
 			for(var j=0;j<width.value;j++){	
 				td[i][j].marker=4;	
 				if(td[i][j].bomb==1){
-					td[i][j].id.innerHTML='<IMG SRC="./images/bomb.jpg">';
+					td[i][j].id.innerHTML='<IMG SRC="images/bomb.jpg">';
 				}else if(td[i][j].bomb==2){
-					td[i][j].id.innerHTML='<IMG SRC="./images/bomb1.jpg">';
+					td[i][j].id.innerHTML='<IMG SRC="images/bomb1.jpg">';
 				}else{									
-				//	td[i][j].id.innerHTML='<IMG SRC="./images/space'+td[i][j].total+'.jpg">';
+				//	td[i][j].id.innerHTML='<IMG SRC="images/space'+td[i][j].total+'.jpg">';
 				}
 			}
 		}
 		die=true;
 	}else {
-		td[x][y].id.innerHTML='<IMG SRC="./images/space'+td[x][y].total+'.jpg">';		
+		td[x][y].id.innerHTML='<IMG SRC="images/space'+td[x][y].total+'.jpg">';		
 		td[x][y].marker=4;
 		if(td[x][y].total==0){//完全無炸彈
 			if(x-1 >=0 && td[x-1][y].marker == 0){//上方
@@ -112,15 +112,15 @@ function RightMouse(i,j){
 		return;	
 	td[i][j].marker = (td[i][j].marker+1) % 3;
 	if(td[i][j].marker == 0){
-		td[i][j].id.innerHTML = '<img src="./images/space.jpg">';
+		td[i][j].id.innerHTML = '<img src="images/space.jpg">';
 	}else if(td[i][j].marker == 1){
 		flag.value--;
 		flag.innerHTML=flag.value;		
-		td[i][j].id.innerHTML = '<IMG SRC="./images/flag.jpg">';
+		td[i][j].id.innerHTML = '<IMG SRC="images/flag.jpg">';
 	}else if(td[i][j].marker==2){
 		flag.value++;
 		flag.innerHTML=flag.value;
-		td[i][j].id.innerHTML = '<img src="./images/unnow.jpg">';
+		td[i][j].id.innerHTML = '<img src="images/unnow.jpg">';
 	//	td[i][j].marker=0;
 	}
 	if(step==0 && flag.value==0){
