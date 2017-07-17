@@ -1,0 +1,15 @@
+td:hover {
+    background-color: #66ff99;
+}
+
+td{
+	width : 34px;
+	height: 34px;
+	font-size:24px;
+	text-align: center;
+}
+
+table{
+	background-color: #009966;
+}
+	  
