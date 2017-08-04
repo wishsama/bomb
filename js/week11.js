@@ -23,6 +23,7 @@ function DrawTable(){
 			document.write('炸彈數:<input type = "text" id="total" name="total" value="'+total.value+'"><br/>');
 			document.write('<button type="button" onclick="DrawTable()" >確定</button><br/>');			
 			document.write('剩餘標籤：<input type="text" id="flag" name="flag" value="'+flag.value+' "readonly="readonly"><br/>');
+			document.write('<input id="btnPrint" type="button" value="print" onclick="javascript:print()"/>');
 	document.write('</form>')
 	
 		document.write('<link rel="stylesheet" type="text/css" href="/css/mystyle.css">');
